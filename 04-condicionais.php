@@ -30,7 +30,7 @@ if($numerofrutas>30){
 <?php
 // controle de estoque
 $produto = "ultrabook";
-$qtdemestoque = 10; // o que temos no momento
+$qtdemestoque = 1; // o que temos no momento
 $qtdcritica = 2; //mínimo necessário
 ?>
     <h3>produto: <?=$produto?></h3>
@@ -45,11 +45,6 @@ if ($qtdemestoque<$qtdcritica) {
     /* caso contrário, simplesmente falar que o estoque está normal. */
     echo "<p>o estoque está normal</p>";
 }
-
-
-
-
-
 ?>
 
 
