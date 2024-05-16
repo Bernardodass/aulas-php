@@ -31,8 +31,8 @@ if($numerofrutas>30){
 
 
 // controle de estoque
-$produto = "ultrabook";
-$qtdemestoque = 0; // o que temos no momento
+$produto = "geladeira";
+$qtdemestoque = 11; // o que temos no momento
 $qtdcritica = 10; //mínimo necessário
 ?>
     <h3>Produto: <?=$produto?></h3>
@@ -53,8 +53,21 @@ if ($qtdemestoque<$qtdcritica) {
     echo "<p class =\"alert alert-success\">O estoque está normal</p>";
 }
 ?>
-
-
+<hr>
+<h2>Encadeada (usa <code>if, else, elseif</code>)</h2>
+<?php
+/* verificando o produto e atribuindo diferentes garantias */
+if ($produto == "Ultrabook"){
+    $garantia = 5;
+} elseif($produto == "geladeira"){
+    $garantia = 3;
+} elseif($produto == "TV"){
+    $garantia = 2;
+} else {
+    $garantia = 1;
+}
+?>
+<p>O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"><?=$garantia?></span> anos.</p>
     </div>
 </body>
 </html>
