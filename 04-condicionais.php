@@ -59,7 +59,7 @@ if ($qtdemestoque<$qtdcritica) {
 /* verificando o produto e atribuindo diferentes garantias */
 if ($produto == "Ultrabook"){
     $garantia = 5;
-} elseif($produto == "geladeira"){
+} elseif($produto == "Geladeira"){
     $garantia = 3;
 } elseif($produto == "TV"){
     $garantia = 2;
@@ -73,6 +73,22 @@ if ($garantia == 1) {
 }
 ?>
 <p>O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"><?=$garantia?></span> <?=$anos?></p>
+
+
+<hr>
+
+<h2>Condicional com <code>switch/case</code></h2>
+<p><i>Estrutura alternativa para condicional encadeada</i></p>
+
+<?php
+switch($produto){
+    case "Ultrabook": $garantiaB = 5; break;
+    case "Geladeira": $garantiaB = 3; break;
+    case "TV": $garantiaB = 2; break;
+    default: $garantiaB = 1; break;};
+?>
+<p>Garantia B: <?=$garantiaB?></p>
+
     </div>
 </body>
 </html>
