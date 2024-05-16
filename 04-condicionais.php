@@ -31,7 +31,7 @@ if($numerofrutas>30){
 
 
 // controle de estoque
-$produto = "geladeira";
+$produto = "TV";
 $qtdemestoque = 11; // o que temos no momento
 $qtdcritica = 10; //mínimo necessário
 ?>
@@ -66,8 +66,13 @@ if ($produto == "Ultrabook"){
 } else {
     $garantia = 1;
 }
+if ($garantia == 1) {
+    $anos = "ano";
+} else {
+    $anos = "anos";
+}
 ?>
-<p>O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"><?=$garantia?></span> anos.</p>
+<p>O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"><?=$garantia?></span> <?=$anos?></p>
     </div>
 </body>
 </html>
