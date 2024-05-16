@@ -42,7 +42,6 @@
         <h3>Produto: <?= $produto ?></h3>
         <h3>quantidade no estoque: <?= $qtdEstoque ?></h3>
  
- 
         <?php
         if ($qtdEstoque < $qtdCritica) {
         ?>
