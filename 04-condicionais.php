@@ -22,28 +22,35 @@ if($numero<100){
 <?php
 $numerofrutas = 60;
 if($numerofrutas>30){
-    echo "<p>tem muitas frutas</p>";
+    echo "<p>Tem muitas frutas</p>";
 } else {
-    echo "<p>tem umas frutas</p>";
+    echo "<p>Tem umas frutas</p>";
 }
 ?>
 <?php
+
+
 // controle de estoque
 $produto = "ultrabook";
-$qtdemestoque = 3; // o que temos no momento
-$qtdcritica = 2; //mínimo necessário
+$qtdemestoque = 0; // o que temos no momento
+$qtdcritica = 10; //mínimo necessário
 ?>
-    <h3>produto: <?=$produto?></h3>
-    <h3>estoque: <?=$qtdemestoque?></h3>
+    <h3>Produto: <?=$produto?></h3>
+    <h3>Estoque: <?=$qtdemestoque?></h3>
 
     <?php
 
 if ($qtdemestoque<$qtdcritica) {
     /* se a quantidade em estoque for abaixo da quantidade crítica, o sistema deve avisar e pedir para repor. */
-    echo "<p class=\"alert alert-danger\">é necessário repor o estoque</p>";
+    echo "<p class=\"alert alert-warning\">É necessário repor o estoque</p>";
+
+    // condicional ANINHADA
+    if($qtdemestoque == 0){
+        echo "<p class =\"alert alert-danger\">AGORA!!!</p>";
+    }
 } else {
     /* caso contrário, simplesmente falar que o estoque está normal. */
-    echo "<p class =\"alert alert-success\">o estoque está normal</p>";
+    echo "<p class =\"alert alert-success\">O estoque está normal</p>";
 }
 ?>
 
