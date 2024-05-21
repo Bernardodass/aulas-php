@@ -7,7 +7,7 @@
 </head>
 <body>
     <header>
-        <h1>Equipe - Site</h1>
+        <h1>Site Exemplo</h1>
         <nav>
             <a href="index.php">Home</a>
             <a href="equipe.php">Equipe</a>
