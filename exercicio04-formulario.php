@@ -8,25 +8,33 @@
 <body>
     <h1>Exercício 04 (formulário)</h1>
     <hr>
-    <form autocomplete="off" action="" method="">
+    
+  
+
+    <form autocomplete="off" action="exercicio04-processamento.php" method="post">
         <p>
             <label for="produto">Produto:</label>
             <input required type="text" name="produto" id="produto">
         </p>
      
-		<p>
-			<label for="fabricante">Fabricante:</label>
-			<select name="fabricante" id="fabricante">
-				<!-- não apague este <option> vazio -->
-				<option value=""></option>
-				
-				<!-- Faça aqui a programação necessária para obter os dados de um array (criado por você)
-				e colocá-los (cada um) dentro de uma tag <option>. -->	
+        <p>
+            <label for="fabricante">Fabricante:</label>
+            <select name="fabricante" id="fabricante">
+                <!-- não apague este <option> vazio -->
+                <option value=""></option>
+                
+                <!-- Preenchendo os dados do array dentro da tag <option>. --> 
+                <?php
+                $fabricantes = ['Dell', 'Samsung', 'Apple', 'HP'];
+                foreach ($fabricantes as $fabricante){ ?>
+                    <option value='$fabricante'>,?=$fabricante?></option>
+                <?php
+                }
+                ?>
+            </select>
+        </p>
 
-			</select>
-		</p>
-
-		<p>
+        <p>
             <label for="preco">Preço:</label>
             <input required type="number" name="preco" id="preco" min="100" max="10000" step="0.01">
         </p>
